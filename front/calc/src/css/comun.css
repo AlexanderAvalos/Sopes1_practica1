@@ -1,0 +1,23 @@
+.ContainerPrincipal {
+    position: absolute;
+        left: 10%;
+        top: 10%;
+        transform: translate(-30%,-30%);
+        border: 1px solid black;
+        padding: 10px;
+        background-color: white;
+}
+
+body{
+    background-color: white;
+}
+.col{
+    border: 1px solid transparent;
+    background-color:rgb(39, 39, 39);
+}
+.Container{
+    background-color: rgb(26, 26, 26);
+}
+    .containerSecundario{
+        text-align: center;
+    }
