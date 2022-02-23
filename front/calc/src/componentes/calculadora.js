@@ -11,7 +11,7 @@ import axios from 'axios';
 export default function Calculadora(){
     const [valor,setvalue] = useState('');
     
-    const Operar = () =>{
+    async function Operar  () {
         var valor1 =0;
         var valor2 =0;
         var signo = '';
@@ -50,6 +50,18 @@ export default function Calculadora(){
             resultado = valor1 * valor2;
             setvalue(resultado)
         }
+    var dia = new Date();
+    var fecha = dia.toISOString();
+    let Operacion = {
+        num1: valor1,
+        num2: valor2,
+        signo: signo,
+        resultado:resultado,
+        fecha: String(fecha)
+    };
+    console.log(Operacion);
+    const {dato} = await axios.post("http://localhost:8080/datos",Operacion);
+
     }
     
     return(

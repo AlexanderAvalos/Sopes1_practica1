@@ -1,30 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../css/comun.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/esm/Container';
 import Form from 'react-bootstrap/Form';
+import Table from 'react-bootstrap/Table';
 
 
+export default function base() {
 
-export default function base(){
 
     return (
         <>
-            <Container> 
-            <Form.Group controlId="formGridEmail">
-                <Form.Label style={{ color: 'black' }}>Nombre: Rodolfo Alexander Avalos Soto</Form.Label>  <br />
-                <Form.Label style={{ color: 'black' }}>Carnet: 20180210</Form.Label> <br />
-                <Form.Label style={{ color: 'black' }}>Universidad: San Carlos De Guatemala</Form.Label> <br />
-                <Form.Label style={{ color: 'black' }}>Carrea: Ingenieria en Ciencas y Sistemas</Form.Label> <br />
-                <Form.Label style={{ color: 'black' }}>Segundo Semestre 2021</Form.Label> <br />
-                <Form.Label style={{ color: 'black' }} >Seccion C</Form.Label>
-                 <br />
-            </Form.Group>
+            <Container>
+                <Form.Group controlId="formGridEmail">
+                    <Table responsive striped bordered hover size="sm" variant="dark">
+                        <thead>
+                            <tr>
+                                <th>Numero21</th>
+                                <th>Numero 2</th>
+                                <th>Signo</th>
+                                <th>Resultado</th>
+                                <th>Fecha</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr >
+                                <td>1</td>
+                                <td>2</td>
+                                <td>+</td>
+                                <td>3</td>
+                                <td>a</td>
+                            </tr>
+                        </tbody>
+                    </Table>
+                </Form.Group>
 
             </Container>
 
-            
-            
+
+
         </>
     );
 
